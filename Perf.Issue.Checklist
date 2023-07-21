@@ -1,0 +1,28 @@
+###### Checklist for Performance issues for linux server
+
+    # uptime : Uptime is a command that returns information about how long your system has been running
+        # together with the current time, number of users with running sessions, 
+        # and the system load averages for the past 1, 5, and 15 minutes.
+
+    # dmesg : kernel logs 
+
+    # vmstat :vmstat command in Linux/Unix is a performance monitoring command of the system 
+        # as it gives the information about processes, memory, paging, block IO, disk, and CPU scheduling. 
+        # vmstat 1 
+
+    # mpstat : (installation required ) mpstat is a command that is used to report processor related statistics. 
+        # mpstat 1 / mpstat -P ALL 1
+    
+    # pidstat : The pidstat command is used for monitoring individual tasks currently being managed by the Linux kernel.
+        # pidstat 1 
+
+    # iostat : The iostat command in Linux is used for monitoring system input/output statistics for devices and partitions. 
+        # iostat -xz 1 
+
+    # free : The free command gives information about used and unused memory usage and swap memory of a system 
+        # free -m 
+
+    # sar : sar -n DEV 1 : network i/o monitorization
+        #   sar -n TCP,ETCP 1 
+    
+    # top : top command is used to show the Linux processes

@@ -1,0 +1,73 @@
+### Network tools 
+
+###### IFCONFIG 
+
+
+    ##  ifconfig : linux sistemlerde ag arayuzlerinde teshis ve konfigurasyon saglar (net-tools paketinin icinde gelir)
+
+    ## 'ip a' komutu da benzer ciktiyi verir. 
+
+    ## network interface: ag donanimlarinin yazilim arayuzudur. (physical ya da virtual)
+
+    ## Genelde eth0 : ethernet ag karti 
+
+    ## virtual network interface : software defined networks
+
+    # lo : virtual network interface , loopback aygiti denir. localhost ta calisan servisleri teshis ve problem cozumunde kullanilir. 
+
+    # UP bu interface in aktif oldugunu gosterir 
+
+    # BROADCAST broadcast paketlerini almaya hazir oldugunu gosterir
+
+    # RUNNING interface in veri almaya hazir oldugunu gosterir 
+
+    # MULTICAST multicast yani coklu yayini destekledigini gosterir
+
+    # MTU is maximum transmission unit.
+
+    # RX gelen paketleri , TX iletilen poaketleri gosterir Receive/ Transmit
+
+######  HOSTNAME 
+
+    # hostname : cihaz adini soyler
+    # hostname -I : local ip addresslerini verir
+
+###### IP 
+
+    #   Kullanimi
+    # IP adresleri listelemek : ip address show / ip a / ip addr / ip addr show 
+    # Ipv4 ve  Ipv6 adresleri goruntulemek : ip -4 addr / ip -6 addr
+    # Tek bir ag arayuzunu goster  : ip addr show dev eth0
+    # Belirli bir arayuze ip eklemek : sudo ip addr add 192.168.7.22 dev eth0 
+    # IP Address silmek : sudo ip addr del 192.168.7.22 dev eth0 
+    # Network interfacelerin ip lerini goster : ip link show 
+    # Bir Network Interface i baslatip durdurmak : sudo ip link set eth0 down/  sudo ip link set eth0 up
+    # ip r : defautl gateway bilgisi
+    
+###### PING 
+
+    # ip den cevap geliyor mu test etmek icin kullanilir 
+    # ping -c 4 www.google.com : url i 4 defa kontrol eder 
+
+###### TCPDUMP 
+
+    # sudo tcpdump : ag trafigini izlemeyi saglar 
+
+###### IFTOP 
+
+    # iftop  : gelismis ag analizi yapar (kurulum gerekiyor)
+
+###### DNS RESOLVING
+
+    # /etc/hosts dosyasi local dns server islevi gorur
+    # /etc/resolv.conf nameresolver lar burada tanimlaniyor 
+    # /etc/nsswitch.conf dosyasinda name server ayarlari var , ns sirasi duzenlenebilir 
+    # nslookup ile nameserver test edilebilir ip yazip domain de alinabilir 
+    # nslookup -query=ns google.com nameserver i da gosterir
+
+###### SSH 
+
+    # ssh <username>@<hostip> ile ayni agdaki diger makinaya baglanti kurulabilir. 
+    
+
+
